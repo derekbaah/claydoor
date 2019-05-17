@@ -1,0 +1,8 @@
+<%= simple_form_for @job do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :company %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Category"} %>
+  <%= f.input :url %>
+  <%= f.button :submit %>
+<% end %>

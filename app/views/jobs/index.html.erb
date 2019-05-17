@@ -1,0 +1,20 @@
+<div class="container">
+  
+  <h1>Job Board</h1>
+  
+  <div class="row">
+    <div class="col-md-4">
+      <% @jobs.each do |job| %>
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to job.title, job %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= job.company %></h6>
+            <p class="card-text"><%= job.description %></p>
+            <span class="badge badge-secondary"><%= job.category.name %></span>
+          </div>
+        </div>
+      
+    </div>
+    <% end %>
+  </div>
+</div>
